@@ -1,0 +1,209 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+body{
+  width: 85%;
+  margin: 0 auto;
+}
+
+h1{
+  font-family: 'Secular One', sans-serif;
+  text-align: center;
+  margin: 35px 0 20px;
+}
+
+.search--input{
+  position: relative;
+}
+
+.search input { 
+  padding: 8px 0;
+  width: 100%;
+  border: 0;
+  box-shadow: 3px 7px 9px 0px #ebebeb;
+}
+
+.search label { 
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  font-style: italic;
+  transition: all .3s ease;
+}
+
+.search label.actived { 
+  transform-origin: 0% 100%;
+  transform: translateY(-20px) scale(0.8);
+}
+
+.checkboxes{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.checkboxes .checkboxes--list {
+  list-style: none;
+  display: inline-flex;
+}
+
+.checkboxes .checkboxes--list li{
+  margin-right: 10px;
+}
+
+.checkboxes .checkboxes--list li:last-child{
+  margin-right: 0;
+}
+
+.checkboxes .checkboxes--list li input{
+  display: none;
+}
+
+.checkboxes .checkboxes--list li input[id="java"]:checked + label > .checkbox-mark{
+  background: url('../icons/java.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.checkboxes .checkboxes--list li input[id="javascript"]:checked + label > .checkbox-mark{
+  background: url('../icons/javascript.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.checkboxes .checkboxes--list li input[id="python"]:checked + label > .checkbox-mark{
+  background: url('../icons/python.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.checkboxes .checkboxes--list li input[type="radio"]:checked + label > .radio-mark::after{
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  background: #000;
+}
+
+.checkboxes .checkboxes--list li .clear-filter{
+  text-decoration: none;
+  color: #000;
+  font-style: italic;
+  position: relative;
+  padding-bottom: 2px;
+  font-weight: 700;
+}
+
+.checkboxes .checkboxes--list li .clear-filter::after{
+  transition: all .3s ease;
+  content: '';
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  border: 1px solid transparent;
+}
+
+.checkboxes .checkboxes--list li .clear-filter:hover::after{
+  width: 100%;
+  border-color: #000;
+}
+
+.checkboxes .checkboxes--list li label{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkboxes .checkboxes--list li label .checkbox-mark{
+  width: 18px;
+  height: 18px;
+  display: block;
+  border: 1px solid;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.checkboxes .checkboxes--list li label .radio-mark{
+  width: 16px;
+  height: 16px;
+  display: flex;
+  border: 1px solid;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.qtdDevs {
+  margin: 25px 0 0px;
+}
+
+.listDevs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+}
+
+.listDevs .dev {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 12px 0px #e7e7e7;
+  border-radius: 16px;
+  margin: 10px;
+}
+
+.listDevs .dev .dev--img img{
+  width: 120px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.listDevs .dev .dev--info{
+  padding: 0 10px;
+}
+
+.listDevs .dev .dev--info_name{
+  margin-bottom: 10px;
+}
+
+.listDevs .dev .dev--info_icon{
+  display: flex;
+  align-items: center;
+}
+
+.listDevs .dev .dev--info_icon img{
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  padding: 2px;
+  box-shadow: 2px 2px 5px 0px #333;
+  border-radius: 4px;
+}
+
+@media (max-width: 1170px){
+  .listDevs {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 920px){
+  .listDevs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 625px){
+  .listDevs {
+    grid-template-columns: 1fr;
+  }
+}

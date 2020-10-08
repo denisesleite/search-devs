@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>Desafio Final - Frontend</title>
+</head>
+<body>
+  <h1>Search Devs</h1>
+
+  <div class="search">
+    <div class="search--input">
+      <input type="text" id="search-input">
+      <label for="search-input" class="label-search">Pesquisar por...</label>
+    </div>
+  </div>
+
+  <div class="checkboxes">
+    <ul class="checkboxes--list">
+      <li>
+        <input type="checkbox" id="java" name="languagesInput"/>
+        <label for="java">
+          <span class="checkbox-mark"></span>
+          Java
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="javascript" name="languagesInput"/>
+        <label for="javascript">
+          <span class="checkbox-mark"></span>
+          Javascript
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="python" name="languagesInput"/>
+        <label for="python">
+          <span class="checkbox-mark"></span>
+          Python
+        </label>
+      </li>
+      <li>
+        <a href="#" class="clear-filter">Limpar Filtros</a>
+      </li>
+    </ul>
+    <ul class="checkboxes--list">
+      <li>
+        <input type="radio" id="and" name="searchRadio"/>
+        <label for="and">
+          <span class="radio-mark"></span>
+          E
+        </label>
+      </li>
+      <li>
+        <input type="radio" id="or" name="searchRadio"/>
+        <label for="or">
+          <span class="radio-mark"></span>
+          OU
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div class="qtdDevs">
+    <p class="countDevs"></p>
+  </div>
+
+  <div class="listDevs">
+  </div>
+
+  <script src="../backend/devs.json"></script>
+  <script src="assets/js/javascript.js"></script>
+</body>
+</html>
