@@ -144,8 +144,8 @@ function filteredDevsChecked(){
 
     inputsRadio.forEach(elem => {
       elem.addEventListener("input", (e) => {
+          inputSearch.value = "";
           filterDevs = allDevs.filter(({languagesTypes}) => {
-  
           return e.target.id === "or"
             ? languagesTypes.some((dev) => filteredLanguages.includes(dev))
             : filteredLanguages.join("") === languagesTypes.join("");
